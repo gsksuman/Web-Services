@@ -1,1 +1,13 @@
 
+WSDL to stub for SOAP client:
+-------------------
+1)	Configure Apache Axis2 in Eclipse 
+Download package from https://axis.apache.org/axis2/java/core/download.cgi
+In eclipse go to Window -> Preferences -> Web services -> Axis2 preferences -> Axis2 runtime location – browse and provide axis2 package path
+2)	For SOAP client 
+a)	Add any http server(tomcat) in eclipse
+i)	 In eclipse go to Window -> Preferences -> Server -> Server Runtime Environment -> Click on Add button and browse for tomcat folder path
+b)	Create a dynamic web project 
+c)	Copy required Axis2 lib from Axis2 package (step 1) and past in your project lib ( Web content -> WEB-INF ->lib folder)
+d)	Right click on src folder -> new -> other -> Web services -> Web service client -> In service definition provide path of WSDL file -> In configure section select server (if already not selected) then change ‘web service runtime’ to ‘Apache Axis’ -> next -> finish. Stubs will be generated in src folder.
+e)	Create a Test Class, add a main method then create your main stub class object and prepare request. Try to run your main class.
